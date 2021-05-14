@@ -11,26 +11,34 @@
         <form id="surveryform" action="index.php" name="form" method="Post">
         <br>
         <a href= "https://nav-coop-sso.uottawa.ca/CoopNav.NET/">
-            <img src="images/coopscreenshot.jpg" alt="https://nav-coop-sso.uottawa.ca/CoopNav.NET/" width="70%"/> </a> 
+            <img src="images/coopscreenshot.jpg" alt="https://nav-coop-sso.uottawa.ca/CoopNav.NET/" width="70%" class="center"/> </a> 
         <div class="surveyquestions">
-        <h3> Please enter your First name and Last name:</h3>
-            <p> First name: <input type="text" name="firstname"><br>
-            <p> Last name: <input type="text" name="lastname"> <br>
+        <h3> Please enter your Full name</h3>
+            <p> Full Name <br> <input type="text" name="Full Name"><br>
             <br>
-         <h3> Please select your gender:</h3>
-            <select name="gender">
+        </div>
+        <div class="optionquestions">
+            <h3> Please select your gender:</h3>
+            <select name="gender" id="selec">
             <option value="male" selected="selected">Male</option>
             <option value="female" selected="selected">Female</option>
             <option value="other" selected="selected">Other</option>
-            <option value="prefernottosay" selected="selected">Prefer not to say</option>
-            </select>
-          
+            <option value="prefernottosay" selected="selected">Prefer not to say</option></select> 
+        </div>  
 
-            <h3> Have you previously used the CO-OP Navigator </h3>
-            <input type="radio" name="YesNo" value="Yes">Yes</t>
-            <input type="radio" name="YesNo" value="No">No<br>           
-
-            <h3> Please select the statements you agree with:</h3>
+        <div class="radioquestions">
+            <h3> Have you previously used the CO-OP Navigator? </h3>
+            <label class="container">Yes
+            <input type="radio" name="YesNo" value="Yes"></t>
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">No
+            <input type="radio" name="YesNo" value="Yes"></t>
+            <span class="checkmark"></span>
+            </label>
+        </div>
+         <div class="surveyquestions">
+            <h3> Please select the statements you agree with:</h3>       
             <input type="checkbox" name="like" value="like"> I like the UI of the CO-OP Navigator</br>
             <input type="checkbox" name="change" value="change"> The UI needs alot of improvement</br>
             <input type="checkbox" name="change" value="change"> The UI functions properly</br>
@@ -38,16 +46,21 @@
             <input type="checkbox" name="change" value="change"> The UI is realiable</br>
             <input type="checkbox" name="change" value="change"> The UI is usable</br>
             <br>
+        </div>
+        <div class="optionquestions">
             <h3> Please write down any comments you have on the UI of the CO-OP Navigator here: </h3>
-            <textarea placeholder= "'Enter Comments here'" rows="10" cols="105"></textarea>
+            <textarea placeholder= "'Enter Comments here'" rows="10" cols="80"></textarea>
+        </div>    
             <br>
             <br>
             <button id="submission" type="button" class="block"> Submit Survey</button>
             <br>
             <br>
-            <p1 id="signature"> Questionnaire created by Joseph Abonasara</p1>
+        <footer>
+            <p id="signature"> Questionnaire created by Joseph Abonasara </p>
+        </footer>
             </form>
-        </div>
+      
     </body>
 </html>
 
