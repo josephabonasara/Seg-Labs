@@ -48,3 +48,10 @@ h1{
     -webkit-text-stroke-color: #661edb; 
     border: 1px solid white;
   }
+
+  #signature {
+    text-align: center;
+    color: blue;
+    font-style: italic;
+    font-size: 80%;
+  }
