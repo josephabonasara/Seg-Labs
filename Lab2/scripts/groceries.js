@@ -73,6 +73,13 @@ var products = [
 		nutFree: false,
 		organic: false,
         price: 7.00
+    },
+	{
+        name: "Organic Lactose Free Milk",
+        lactoseFree: true,
+		nutFree: true,
+		organic: true,
+        price: 2.50
     }
 ];
 	
@@ -99,13 +106,13 @@ function restrictListProducts(prods, restriction) {
 		else if ((restriction == "Nutallergy and Organic") && (prods[i].organic == true && (prods[i].nutFree == true))){
 			product_names.push([prods[i].name, prods[i].price]);
 		}
-		else if ((restriction == "lactoseFree") && (prods[i].lactoseFree == true)){
+		else if ((restriction == "Lactose-intolerant") && (prods[i].lactoseFree == true)){
 			product_names.push([prods[i].name, prods[i].price]);
 		}
-		else if ((restriction == "nutFree") && (prods[i].nutFree == true)){
+		else if ((restriction == "Nutallergy") && (prods[i].nutFree == true)){
 			product_names.push([prods[i].name, prods[i].price]);
 		}
-		else if (restriction == "organic" && prods[i].organic==true){
+		else if (restriction == "Organic" && prods[i].organic==true){
 			product_names.push([prods[i].name, prods[i].price]);	
 		}
 	}

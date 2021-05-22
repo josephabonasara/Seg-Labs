@@ -240,7 +240,6 @@ input[type=text], select {
     color: #FFFFFF;
     padding: 20px;
     width: 171px;
-    text-align: left;
     transition-duration: 0.4s;
     text-decoration: none;
     overflow: hidden;
