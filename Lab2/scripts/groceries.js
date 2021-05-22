@@ -4,74 +4,75 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "Organic banana",
+		lactoseFree: true,
+		nutFree: false,
+		organic: true,
+		price: 1.35
+	},
+	{
+		name: "Organic Brocoli",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
 		price: 1.99
 	},
+	
 	{
-		name: "bread",
+		name: "Organic tomatoes",
 		lactoseFree: true,
-		nutFree: false,
-		organic: true,
-		price: 2.35
-	},
-	{
-		name: "salmon",
-		lactoseFree: false,
 		nutFree: true,
 		organic: true,
-		price: 10.00
+		price: 3.00
 	},
     {
-        name: "Dozen Eggs",
-        lactoseFree: false,
-		nutFree: false,
+        name: "Organic Spinach",
+        lactoseFree: true,
+		nutFree: true,
 		organic: true,
-        price: 2.50
+        price: 4.50
     },
     {
-        name: "Apple",
+        name: "Organic Apple",
         lactoseFree: true,
 		nutFree: true,
 		organic: true,
         price: 1.00
     },
     {
-        name: "Nutella",
+        name: "Organic Peanuts",
         lactoseFree: true,
 		nutFree: false,
 		organic: true,
         price: 5.00
     },
     {
-        name: "nutFree Spinach Pack",
+        name: "Non-Organic Frozen Ravioli",
+        lactoseFree: false,
+		nutFree: true,
+		organic: false,
+        price: 6.00
+    },
+    {
+        name: "Non-Organic Chicken",
         lactoseFree: true,
 		nutFree: true,
-		organic: true,
-        price: 5.00
+		organic: false,
+        price: 7.00
     },
     {
-        name: "Frosted Flakes",
-        lactoseFree: true,
-		nutFree: false,
-		organic: true,
-        price: 4.00
+        name: "Non-Organic Greek Yogurt",
+        lactoseFree: false,
+		nutFree: true,
+		organic: false,
+        price: 3.00
     },
     {
-        name: "Ground Beef",
+        name: "Non-Organic Peanut Butter Ice Cream",
         lactoseFree: false,
 		nutFree: false,
-		organic: true,
-        price: 10.00
-    },
-    {
-        name: "Chicken Breast",
-        lactoseFree: false,
-		nutFree: false,
-		organic: true,
-        price: 10.00
+		organic: false,
+        price: 7.00
     }
 ];
 	
@@ -108,7 +109,7 @@ function restrictListProducts(prods, restriction) {
 			product_names.push([prods[i].name, prods[i].price]);	
 		}
 	}
-	return product_names.sort(function([a,b], [c,d]){
+	return product_names.sort(function([a,b], [c,d]){ // method taken from https://stackoverflow.com/a/50415269
 		return b-d;
 	});;
 }
