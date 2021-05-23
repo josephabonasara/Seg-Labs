@@ -8,14 +8,14 @@ var products = [
 		lactoseFree: true,
 		nutFree: false,
 		organic: true,
-		price: 1.35
+		price: 1.50
 	},
 	{
 		name: "Organic Brocoli",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
-		price: 1.99
+		price: 2.00
 	},
 	
 	{
