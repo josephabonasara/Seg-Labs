@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
     <title>
             Dewi's Groceries
         </title>
+        <link rel="icon" href="assets/cart.PNG">
         <h1>Dewi's Groceries</h1>
 </head>
 
@@ -37,17 +37,17 @@
 	</select>    -->
   <table id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id,'displayProduct')">
         <tr>
-          <td><input id="Organic" type="checkbox" value="Organic"/><label class="containercheckbox">Organic</label></td>  
+          <td><input id="Organic" type="checkbox" value="Organic"/><label class="containercheckbox">Organic<span class="checkmarktwo"></label></td>  
         </tr>
         <tr>
-            <td><input id="Lactose-intolerant" type="checkbox" value="Lactose-intolerant"/><label class="containercheckbox">Lactose-intolerant</label></td>
+            <td><input id="Lactose-intolerant" type="checkbox" value="Lactose-intolerant"/><label class="containercheckbox">Lactose-intolerant<span class="checkmarktwo"></label></td>
         </tr>
         <tr>
-            <td><input id="Nutallergy" type="checkbox" value="Nutallergy"/><label class="containercheckbox">Nut allergy</label></td>
+            <td><input id="Nutallergy" type="checkbox" value="Nutallergy"/><label class="containercheckbox">Nut allergy<span class="checkmarktwo"></label></td>
         </tr>
     </table>
     <br>
-    <button id="Next" type="Next" onclick="openInfo(event, 'Products')">Next</button>
+    <button id="Next" type="Next" class="blockone" onclick="openInfo(event, 'Products')">Next</button>
 </div>
 
 <div id="Products" class="tabcontent">
@@ -57,7 +57,7 @@
 	 <div id="displayProduct"></div>
    <br>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
+		Add selected items to cart
 	</button>
 </div>
 
