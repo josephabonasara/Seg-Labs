@@ -4,7 +4,7 @@
 
 var products = [
 	{
-		name: "Organic banana",
+		name: "Organic Banana",
 		lactoseFree: true,
 		nutFree: false,
 		organic: true,
@@ -19,7 +19,7 @@ var products = [
 	},
 	
 	{
-		name: "Organic tomatoes",
+		name: "Organic Tomatoes",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
@@ -90,7 +90,7 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
-	for (let i=0; i<prods.length; i+=1) {
+	/*for (let i=0; i<prods.length; i+=1) {
 		if (restriction=="None"){
 			product_names.push([prods[i].name, prods[i].price]);	
         }
@@ -114,6 +114,17 @@ function restrictListProducts(prods, restriction) {
 		}
 		else if (restriction == "Organic" && prods[i].organic==true){
 			product_names.push([prods[i].name, prods[i].price]);	
+		}
+	}*/
+	if(restriction["None"]==true){
+		for (let i=0; i<prods.length; i+=1) {
+			product_names.push([prods[i].name, prods[i].price]);	
+	}}else{
+		for (let i=0; i<prods.length; i+=1) {
+			console.log(restriction["Organic"]+ "=="+ prods[i].organic+ " "+ restriction["Nutallergt"]+ "=="+ prods[i].nutFree+ " "+ restriction["Lactose-intolerant"]+ "=="+ prods[i].lactoseFree+ " ");
+			if((restriction["Organic"]==prods[i].organic|| restriction["Organic"]==false) &&(restriction["Nutallergy"]==prods[i].nutFree|| restriction["Nutallergy"]==false) && (restriction["Lactose-intolerant"]==prods[i].lactoseFree|| restriction["Lactose-intolerant"]==false)){
+				product_names.push([prods[i].name, prods[i].price]);	
+			}
 		}
 	}
 	return product_names.sort(function([a,b], [c,d]){ // method taken from https://stackoverflow.com/a/50415269

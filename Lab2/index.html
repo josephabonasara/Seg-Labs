@@ -9,7 +9,7 @@
         <h1>Dewi's Groceries</h1>
 </head>
 
-<body>
+<body onload="populateListProductChoices(this.id,'displayProduct')"> <!--so that product page is updating when page is refreshed-->
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
@@ -23,7 +23,8 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	<h4>Choose a Category:</h4>
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+
+<!--	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
   <option value=""></option>
   <option value="None">None</option>
   <option value="Organic">Organic</option>
@@ -33,7 +34,20 @@
   <option value="Lactose-intolerant and Organic">Lactose-intolerant and Organic</option>
   <option value="Nutallergy and Organic">Nut allergy and Organic</option>
   <option value="Lactose-intolerant Nutallergy and Organic">Lactose-intolerant, Nut allergy and Organic</option>
-	</select>   
+	</select>    -->
+  <table id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id,'displayProduct')">
+        <tr>
+          <td><input id="Organic" type="checkbox" value="Organic"/><label class="containercheckbox">Organic</label></td>  
+        </tr>
+        <tr>
+            <td><input id="Lactose-intolerant" type="checkbox" value="Lactose-intolerant"/><label class="containercheckbox">Lactose-intolerant</label></td>
+        </tr>
+        <tr>
+            <td><input id="Nutallergy" type="checkbox" value="Nutallergy"/><label class="containercheckbox">Nut allergy</label></td>
+        </tr>
+    </table>
+    <br>
+    <button id="Next" type="Next" onclick="openInfo(event, 'Products')">Next</button>
 </div>
 
 <div id="Products" class="tabcontent">
