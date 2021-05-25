@@ -6,7 +6,7 @@ var products = [
 	{
 		name: "Organic Banana",
 		lactoseFree: true,
-		nutFree: false,
+		nutFree: true,
 		organic: true,
 		price: 1.50
 	},
@@ -80,6 +80,20 @@ var products = [
 		nutFree: true,
 		organic: true,
         price: 2.50
+    },
+	{
+        name: "Organic Mozarella Cheese",
+        lactoseFree: false,
+		nutFree: true,
+		organic: true,
+        price: 3.50
+    },
+	{
+        name: "Non-Organic Butter",
+        lactoseFree: false,
+		nutFree: true,
+		organic: false,
+        price: 3.00
     }
 ];
 	
