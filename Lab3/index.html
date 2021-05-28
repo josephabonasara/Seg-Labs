@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>
+            Dewi's Groceries
+        </title>
+        <link rel="icon" href="assets/cart.PNG">
+        <h1>Dewi's Groceries</h1>
+</head>
+
+<body onload="populateListProductChoices(this.id,'displayProduct')"> <!--so that product page is updating when page is refreshed-->
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about the products you are looking for.</p>
+	<h4>Choose a Category:</h4>
+
+<!--	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+  <option value=""></option>
+  <option value="None">None</option>
+  <option value="Organic">Organic</option>
+	<option value="Lactose-intolerant">Lactose-intolerant</option>
+  <option value="Nutallergy">Nut allergy</option>
+  <option value="Lactose-intolerant and Nutallergy">Lactose-intolerant and Nut allergy</option>
+  <option value="Lactose-intolerant and Organic">Lactose-intolerant and Organic</option>
+  <option value="Nutallergy and Organic">Nut allergy and Organic</option>
+  <option value="Lactose-intolerant Nutallergy and Organic">Lactose-intolerant, Nut allergy and Organic</option>
+	</select>    -->
+  <table id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id,'displayProduct')">
+        <tr>
+          <td><input id="Organic" type="checkbox" value="Organic"/><label class="containercheckbox">Organic<span class="checkmarktwo"></label></td>  
+        </tr>
+        <tr>
+            <td><input id="Lactose-intolerant" type="checkbox" value="Lactose-intolerant"/><label class="containercheckbox">Lactose-intolerant<span class="checkmarktwo"></label></td>
+        </tr>
+        <tr>
+            <td><input id="Nutallergy" type="checkbox" value="Nutallergy"/><label class="containercheckbox">Nut allergy<span class="checkmarktwo"></label></td>
+        </tr>
+    </table>
+    <br>
+    <button id="Next" type="Next" class="blockone" onclick="openInfo(event, 'Products')">Next</button>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+  <h4>Choose items to buy:</h4>
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+<footer>
+    <p id="signature"> Website designed by Dewi </p>
+</footer>
+</body>
+</html>
