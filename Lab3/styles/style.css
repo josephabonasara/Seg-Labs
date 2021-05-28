@@ -95,5 +95,9 @@ h1{
       overflow: hidden;
       cursor: pointer;
     }
-
+.pictures{
+  display: flex;
+  height: 200px;
+ 
+}
   

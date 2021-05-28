@@ -82,10 +82,16 @@ function populateListProductChoices(slct1, slct2) {
 		s2.append(": \t"+optionArray[i][1]+"$");
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    
-		s2.appendChild(document.createElement("br"));    
+	
+	//	console.log(optionArray[i][4]);
+	    var image = document.createElement('img');
+		image.className="pictures";
+		image.src=""+optionArray[i][2]+"";
+		s2.appendChild(image);
+		s2.appendChild(document.createElement("br"));  	
 	}
 }
-	
+	//"</label><img class='items' src='" + inventory[i].img + "'/>
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price

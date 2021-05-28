@@ -8,14 +8,16 @@ var products = [
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
-		price: 1.50
+		price: 1.50,
+		image: "assets/banana.png"
 	},
 	{
-		name: "Organic Brocoli",
+		name: "Organic Broccoli",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
-		price: 2.00
+		price: 2.00,
+		image: "assets/broccoli.png"
 	},
 	
 	{
@@ -23,77 +25,88 @@ var products = [
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
-		price: 3.00
+		price: 3.00,
+		image: "assets/tomatoes.png"
 	},
     {
         name: "Organic Spinach",
         lactoseFree: true,
 		nutFree: true,
 		organic: true,
-        price: 4.50
+        price: 4.50,
+		image: "assets/spinach.png"
     },
     {
         name: "Organic Apple",
         lactoseFree: true,
 		nutFree: true,
 		organic: true,
-        price: 1.00
+        price: 1.00,
+		image: "assets/apple.png"
     },
     {
         name: "Organic Peanuts",
         lactoseFree: true,
 		nutFree: false,
 		organic: true,
-        price: 5.00
+        price: 5.00,
+		image: "assets/peanuts.png"
     },
     {
         name: "Non-Organic Frozen Ravioli",
         lactoseFree: false,
 		nutFree: true,
 		organic: false,
-        price: 6.00
+        price: 6.00,
+		image: "assets/ravioli.png"
     },
     {
         name: "Non-Organic Chicken",
         lactoseFree: true,
 		nutFree: true,
 		organic: false,
-        price: 7.00
+        price: 7.00,
+		image: "assets/chicken.png"
     },
     {
         name: "Non-Organic Greek Yogurt",
         lactoseFree: false,
 		nutFree: true,
 		organic: false,
-        price: 3.00
+        price: 3.00,
+		image: "assets/yogurt.png"
     },
     {
         name: "Non-Organic Peanut Butter Ice Cream",
         lactoseFree: false,
 		nutFree: false,
 		organic: false,
-        price: 7.00
+        price: 7.00,
+		image: "assets/peanutbutter.png"
     },
 	{
         name: "Organic Lactose Free Milk",
         lactoseFree: true,
 		nutFree: true,
 		organic: true,
-        price: 2.50
+        price: 2.50,
+		image: "assets/milk.png"
     },
 	{
         name: "Organic Mozarella Cheese",
         lactoseFree: false,
 		nutFree: true,
 		organic: true,
-        price: 3.50
+        price: 3.50,
+		image: "assets/cheese.png"
     },
 	{
         name: "Non-Organic Butter",
         lactoseFree: false,
 		nutFree: true,
 		organic: false,
-        price: 3.00
+        price: 3.00,
+		image: "assets/butter.png"
     }
 ];
 	
@@ -104,40 +117,14 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
-	/*for (let i=0; i<prods.length; i+=1) {
-		if (restriction=="None"){
-			product_names.push([prods[i].name, prods[i].price]);	
-        }
-		else if ((restriction == "Lactose-intolerant Nutallergy and Organic") && (prods[i].lactoseFree == true && (prods[i].nutFree == true)&& (prods[i].organic== true))){
-			product_names.push([prods[i].name, prods[i].price]);
-		}
-		else if ((restriction == "Lactose-intolerant and Nutallergy") && (prods[i].lactoseFree == true && (prods[i].nutFree == true))){
-			product_names.push([prods[i].name, prods[i].price]);
-		}
-		else if ((restriction == "Lactose-intolerant and Organic") && (prods[i].lactoseFree == true && (prods[i].organic == true))){
-			product_names.push([prods[i].name, prods[i].price]);
-		}
-		else if ((restriction == "Nutallergy and Organic") && (prods[i].organic == true && (prods[i].nutFree == true))){
-			product_names.push([prods[i].name, prods[i].price]);
-		}
-		else if ((restriction == "Lactose-intolerant") && (prods[i].lactoseFree == true)){
-			product_names.push([prods[i].name, prods[i].price]);
-		}
-		else if ((restriction == "Nutallergy") && (prods[i].nutFree == true)){
-			product_names.push([prods[i].name, prods[i].price]);
-		}
-		else if (restriction == "Organic" && prods[i].organic==true){
-			product_names.push([prods[i].name, prods[i].price]);	
-		}
-	}*/
 	if(restriction["None"]==true){
 		for (let i=0; i<prods.length; i+=1) {
-			product_names.push([prods[i].name, prods[i].price]);	
+			product_names.push([prods[i].name, prods[i].price,prods[i].image]);	
 	}}else{
 		for (let i=0; i<prods.length; i+=1) {
 			console.log(restriction["Organic"]+ "=="+ prods[i].organic+ " "+ restriction["Nutallergt"]+ "=="+ prods[i].nutFree+ " "+ restriction["Lactose-intolerant"]+ "=="+ prods[i].lactoseFree+ " ");
 			if((restriction["Organic"]==prods[i].organic|| restriction["Organic"]==false) &&(restriction["Nutallergy"]==prods[i].nutFree|| restriction["Nutallergy"]==false) && (restriction["Lactose-intolerant"]==prods[i].lactoseFree|| restriction["Lactose-intolerant"]==false)){
-				product_names.push([prods[i].name, prods[i].price]);	
+				product_names.push([prods[i].name, prods[i].price,prods[i].image]);	
 			}
 		}
 	}
