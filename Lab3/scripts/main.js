@@ -122,3 +122,9 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)+"$"));
 		
 }
+
+function start(){
+	populateListProductChoices(this.id,'displayProduct');
+	document.getElementById("home").click();
+
+}
