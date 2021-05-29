@@ -15,9 +15,9 @@
   <br><br><br><br><br><br><br>
   <a class="tablinks" id="home" onclick="openInfo(event, 'Client')">Client</a>
   <br>
-  <a class="tablinks" onclick="openInfo(event, 'Products')">Products</a>
+  <a class="tablinks" id="productsTab" onclick="openInfo(event, 'Products')">Products</a>
   <br>
-  <a class="tablinks" onclick="openInfo(event, 'Cart')">Cart</a>
+  <a class="tablinks" id="cartTab" onclick="openInfo(event, 'Cart')">Cart</a>
 </div>
 
 <!-- Tab content -->
@@ -46,7 +46,7 @@
   <h3>We filtered products based on your preferences.</h3>
   <h4>Choose items to buy:</h4>
 	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+	 <button id="addCart" type="button" class="block" onclick="gotoCart()">
 		Make my cart!
 	</button>
 </div>

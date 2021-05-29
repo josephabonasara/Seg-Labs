@@ -1,4 +1,3 @@
-	
 // Array of products, each product is an object with different fieldset
 // A set of ingredients should be added to products		 
 
@@ -9,7 +8,8 @@ var products = [
 		nutFree: true,
 		organic: true,
 		price: 1.50,
-		image: "assets/banana.png"
+		image: "assets/Organic Banana.png",
+		category: "fruit"
 	},
 	{
 		name: "Organic Broccoli",
@@ -17,7 +17,8 @@ var products = [
 		nutFree: true,
 		organic: true,
 		price: 2.00,
-		image: "assets/broccoli.png"
+		image: "assets/Organic Broccoli.png",
+		category: "vegetables"
 	},
 	
 	{
@@ -26,7 +27,8 @@ var products = [
 		nutFree: true,
 		organic: true,
 		price: 3.00,
-		image: "assets/tomatoes.png"
+		image: "assets/Organic Tomatoes.png",
+		category: "fruit"
 	},
     {
         name: "Organic Spinach",
@@ -34,7 +36,8 @@ var products = [
 		nutFree: true,
 		organic: true,
         price: 4.50,
-		image: "assets/spinach.png"
+		image: "assets/Organic Spinach.png",
+		category: "vegetable"
     },
     {
         name: "Organic Apple",
@@ -42,7 +45,8 @@ var products = [
 		nutFree: true,
 		organic: true,
         price: 1.00,
-		image: "assets/apple.png"
+		image: "assets/Organic Apple.png",
+		category: "fruit"
     },
     {
         name: "Organic Peanuts",
@@ -50,7 +54,8 @@ var products = [
 		nutFree: false,
 		organic: true,
         price: 5.00,
-		image: "assets/peanuts.png"
+		image: "assets/Organic Peanuts.png",
+		category: "other"
     },
     {
         name: "Non-Organic Frozen Ravioli",
@@ -58,7 +63,8 @@ var products = [
 		nutFree: true,
 		organic: false,
         price: 6.00,
-		image: "assets/ravioli.png"
+		image: "assets/Non-Organic Frozen Ravioli.png",
+		category: "other"
     },
     {
         name: "Non-Organic Chicken",
@@ -66,7 +72,8 @@ var products = [
 		nutFree: true,
 		organic: false,
         price: 7.00,
-		image: "assets/chicken.png"
+		image: "assets/Non-Organic Chicken.png",
+		category: "proteins"
     },
     {
         name: "Non-Organic Greek Yogurt",
@@ -74,7 +81,8 @@ var products = [
 		nutFree: true,
 		organic: false,
         price: 3.00,
-		image: "assets/yogurt.png"
+		image: "assets/Non-Organic Greek Yogurt.png",
+		category: "dairy"
     },
     {
         name: "Non-Organic Peanut Butter Ice Cream",
@@ -82,7 +90,8 @@ var products = [
 		nutFree: false,
 		organic: false,
         price: 7.00,
-		image: "assets/peanutbutter.png"
+		image: "assets/Non-Organic Peanut Butter Ice Cream.png",
+		category: "dairy"
     },
 	{
         name: "Organic Lactose Free Milk",
@@ -90,7 +99,8 @@ var products = [
 		nutFree: true,
 		organic: true,
         price: 2.50,
-		image: "assets/milk.png"
+		image: "assets/Organic Lactose Free Milk.png",
+		category: "dairy"
     },
 	{
         name: "Organic Mozarella Cheese",
@@ -98,7 +108,8 @@ var products = [
 		nutFree: true,
 		organic: true,
         price: 3.50,
-		image: "assets/cheese.png"
+		image: "assets/Organic Mozarella Cheese.png",
+		category: "dairy"
     },
 	{
         name: "Non-Organic Butter",
@@ -106,7 +117,8 @@ var products = [
 		nutFree: true,
 		organic: false,
         price: 3.00,
-		image: "assets/butter.png"
+		image: "assets/Non-Organic Butter.png",
+		category: "dairy"
     }
 ];
 	
