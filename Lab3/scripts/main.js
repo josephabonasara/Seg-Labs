@@ -105,26 +105,27 @@ function selectedItems(){
 	c.innerHTML = "";
 	
 	// build list of selected item
-	var para = document.createElement("P");
+	var para = document.createElement("h4");
 	para.innerHTML = "You selected the following products: ";
 	para.appendChild(document.createElement("br"));
-	para.appendChild(document.createElement("br"));
+	var par = document.createElement("P");
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
-			para.appendChild(document.createElement("br"));
+			par.appendChild(document.createTextNode(ele[i].value));
+			par.appendChild(document.createElement("br"));
 			var image = document.createElement('img');
 			image.className="pictures";
 			image.src="assets/"+ele[i].value+".png";
-			para.appendChild(image);
-			para.appendChild(document.createElement("br"));
+			par.appendChild(image);
+			par.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
 	}
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total price will be " + getTotalPrice(chosenProducts)+"$"));
+	c.appendChild(par);
+	c.appendChild(document.createTextNode("Total price will be " + getTotalPrice(chosenProducts).toFixed(2)+"$"));
 		
 }
 
