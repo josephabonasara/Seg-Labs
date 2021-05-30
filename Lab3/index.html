@@ -13,7 +13,8 @@
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
   <br><br><br><br><br><br><br>
-  <a class="tablinks" id="home" onclick="openInfo(event, 'Client')">Client</a>
+  <a class="tablinks" id="home" onclick="openInfo(event, 'Home')">Home</a>
+  <a class="tablinks" id="client" onclick="openInfo(event, 'Client')">Client</a>
   <br>
   <a class="tablinks" id="productsTab" onclick="openInfo(event, 'Products')">Products</a>
   <br>
@@ -21,6 +22,17 @@
 </div>
 
 <!-- Tab content -->
+<div id="Home" class="tabcontent">
+  <h1>Dewi's Groceries</h1>
+  <h3>Here are the instructions on how to successfully use Dewi's Groceries:</h2> 
+	<p>1- You can start in the Client tab where you will be asked to choose your preferences between 3 options; Organic, Lactose-free and/or Nut-free.</p>
+  <p>2- Once you completed this step you can press the Next button to go to the Products page.</p>
+  <p>3- You can select what products you want on the products page by pressing on the checkbox over the image. Once finished, you can press the "Make my cart!" button.</p>
+  <p>4- You will be taken to the Cart page where you will see all the products you selected.</p>
+  <p>5- Finally, you can purchase these products by pressing the "Proceed to Checkout" button, or you can go back and update your cart by pressing the "Go back to products" button.</p>
+  <button id="startOrder" type="button" class="blockstart" onclick="gotoClient()">Start your order!</button>
+</div>
+
 <div id="Client" class="tabcontent">
   <h1>Dewi's Groceries</h1>
   <h2>Tell us about your preferences</h2>
@@ -28,17 +40,24 @@
 
   <table id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id,'displayProduct')">
         <tr>
-          <td><input id="Organic" type="checkbox" value="Organic"/><label class="containercheckbox">Organic<span class="checkmarktwo"></label></td>  
+          <td><input id="Organic" type="checkbox" value="Organic"/><label class="containercheckbox"> Organic<span class="checkmarktwo"></label></td>  
         </tr>
         <tr>
-            <td><input id="Lactose-intolerant" type="checkbox" value="Lactose-intolerant"/><label class="containercheckbox">Lactose-intolerant<span class="checkmarktwo"></label></td>
+            <td><input id="Lactose-intolerant" type="checkbox" value="Lactose-intolerant"/><label class="containercheckbox"> Lactose-free<span class="checkmarktwo"></label></td>
         </tr>
         <tr>
-            <td><input id="Nutallergy" type="checkbox" value="Nutallergy"/><label class="containercheckbox">Nut allergy<span class="checkmarktwo"></label></td>
+            <td><input id="Nutallergy" type="checkbox" value="Nutallergy"/><label class="containercheckbox"> Nut-free<span class="checkmarktwo"></label></td>
         </tr>
     </table>
     <br>
-    <button id="Next" type="Next" class="blockone" onclick="openInfo(event, 'Products')">Next</button>
+  <div id="outer3" class ="outer3">
+   <div id="inner5" class ="inner3">
+   <button id="homepage" type="previouspage" class="blockHome" onclick="openInfo(event, 'Home')">Previous page</button></div>
+   <div id="inner5" class ="inner3">
+	<button id="Next" type="Next" class="blockone" onclick="openInfo(event, 'Products')">Next</button></div>
+  </div>
+  </div>
+    
 </div>
 
 <div id="Products" class="tabcontent">
@@ -46,14 +65,26 @@
   <h3>We filtered products based on your preferences.</h3>
   <h4>Choose items to buy:</h4>
 	 <div id="displayProduct"></div><br>
+   <div id="outer2" class ="outer2">
+   <div id="inner3" class ="inner2">
+   <button id="backtoClient" type="button" class="blockHome" onclick="gotoClient()">
+		Previous Page
+	</button></div>
+  <div id="inner4" class ="inner2">
 	 <button id="addCart" type="button" class="block" onclick="gotoCart()">
 		Make my cart!
-	</button>
+	</button></div>
+  </div>
 </div>
 
 <div id="Cart" class="tabcontent">
   <h1>Cart</h1>
   <div id="displayCart"></div>
+   <div id="outer" class ="outer">
+   <div id="inner1" class ="inner">
+   <button id="previous" type="button" class="blockHome" onclick="gotoProduct()">
+   Previous page</button></div>
+   </div>
 </div>
 
 <script src="scripts/groceries.js"></script>

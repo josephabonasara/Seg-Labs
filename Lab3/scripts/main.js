@@ -77,7 +77,7 @@ function populateListProductChoices(slct1, slct2) {
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.appendChild(document.createTextNode(" "+ productName));
 		s2.appendChild(label);
 		s2.append(": \t"+optionArray[i][1]+"$");
 		// create a breakline node and add in HTML DOM
@@ -126,6 +126,23 @@ function selectedItems(){
 	c.appendChild(para);
 	c.appendChild(par);
 	c.appendChild(document.createTextNode("Total price will be " + getTotalPrice(chosenProducts).toFixed(2)+"$"));
+	var phrase=document.createElement("P");
+	phrase.appendChild(document.createElement("br"));
+	c.appendChild(phrase);
+	
+	if(document.getElementById("checkout")==null){
+		var d = document.getElementById('outer');
+		var inner2= document.createElement("div");
+		inner2.className="inner";
+
+		var but= document.createElement("button");
+		but.className="blockCheckout";
+		but.innerHTML="Proceed to Checkout";
+		but.id="checkout";
+     	inner2.appendChild(but);
+		 
+		d.appendChild(inner2);
+	}
 		
 }
 
@@ -136,4 +153,10 @@ function start(){
 function gotoCart(){
 	selectedItems();
 	document.getElementById("cartTab").click();
+}
+function gotoClient(){
+	document.getElementById("client").click();
+}
+function gotoProduct(){
+	document.getElementById("productsTab").click();
 }

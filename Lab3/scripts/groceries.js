@@ -55,7 +55,7 @@ var products = [
 		organic: true,
         price: 5.00,
 		image: "assets/Organic Peanuts.png",
-		category: "other"
+		category: "proteins"
     },
     {
         name: "Non-Organic Frozen Ravioli",
@@ -64,7 +64,7 @@ var products = [
 		organic: false,
         price: 6.00,
 		image: "assets/Non-Organic Frozen Ravioli.png",
-		category: "other"
+		category: "grains"
     },
     {
         name: "Non-Organic Chicken",
