@@ -28,7 +28,7 @@
 	<p>1- You can start in the Client tab where you will be asked to choose your preferences between 3 options; Organic, Lactose-free and/or Nut-free.</p>
   <p>2- Once you completed this step you can press the Next button to go to the Products page.</p>
   <p>3- You can select what products you want on the products page by pressing on the checkbox over the image. Once finished, you can press the "Make my cart!" button.</p>
-  <p>4- You will be taken to the Cart page where you will see all the products you selected.</p>
+  <p>4- You will be taken to the Cart page where you will see all the products you selected and get to select your preferred delivery method.</p>
   <p>5- Finally, you can purchase these products by pressing the "Proceed to Checkout" button, or you can go back and update your cart by pressing the "Go back to products" button.</p>
   <button id="startOrder" type="button" class="blockstart" onclick="gotoClient()">Start your order!</button>
 </div>
@@ -79,6 +79,12 @@
 
 <div id="Cart" class="tabcontent">
   <h1>Cart</h1>
+  <div class="optionquestions">
+  <h3>Delivery method</h3>
+  <select name="Delivermethod" id="selec">
+  <option style="display:nonne">
+  <option value="Curbside Pickup">Curbside Pickup</option>
+  <option value="Delivery">Delivered to your door</option></select></div>
   <div id="displayCart"></div>
    <div id="outer" class ="outer">
    <div id="inner1" class ="inner">

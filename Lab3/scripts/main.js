@@ -79,7 +79,7 @@ function populateListProductChoices(slct1, slct2) {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(" "+ productName));
 		s2.appendChild(label);
-		s2.append(": \t"+optionArray[i][1]+"$");
+		s2.append(": \t"+optionArray[i][1].toFixed(2)+"$");
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    
 	

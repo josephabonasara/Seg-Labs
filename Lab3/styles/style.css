@@ -116,7 +116,7 @@ h2,h3,h4{ font-family: 'Comfortaa', cursive;}
       font-size: 100%;
       color: black;
       padding: 10px;
-      width: 150px;
+      width: 200px;
       margin-left:20px;
       transition-duration: 0.4s;
       text-decoration: none;
@@ -193,5 +193,32 @@ h2,h3,h4{ font-family: 'Comfortaa', cursive;}
 }
 input[type=checkbox] {
   transform: scale(1.5);
+
+}
+
+input[type=text], select {
+  text-align: left;
+  width:25%;
+  height: 50px;
+  padding: 12px 20px;
+  font-size: 100%;
+  margin: 8px 0;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #ccc;;
+  border-bottom: 2px solid rgb(134, 133, 133);
+  color: black;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.optionquestions{
+
+  background-color: white;
+  color: black;
+
 
 }
