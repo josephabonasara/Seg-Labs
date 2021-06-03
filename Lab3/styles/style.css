@@ -198,7 +198,7 @@ input[type=checkbox] {
 
 input[type=text], select {
   text-align: left;
-  width:25%;
+  width:15%;
   height: 50px;
   padding: 12px 20px;
   font-size: 100%;
@@ -216,7 +216,6 @@ input[type=text], select {
   -moz-appearance: none;
 }
 .optionquestions{
-
   background-color: white;
   color: black;
 
