@@ -11,9 +11,12 @@ This will help you get started with your code!
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
-    <title>Module 4 Lab</title>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- added this script for the fontawesome icons on the map-->
+    <title>Dewi's Physiotherapy Clinic</title>
+    <link rel="icon" href="images/company_logo.png"
 </head>
 <body>
+
 <!--
 I store all of the page information in a container,
 Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
@@ -27,176 +30,265 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     -->
 
     <nav class="navbar bg-dark text-white p-3 my-3 ">
-        <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to my Physiotherapy Clinic</h1>
+        <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to Dewi's Physiotherapy Clinic</h1>
     </nav>
-
     <div class=" p-3 my-3 border bg-light">
-        <h1 class=""> About us</h1>
-        <p class="p-4 my-3" style="font-size: 25px">We are a small clinic located in Smiths Falls Ontario</p>
-        <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing the <strong>best</strong> care to our customers</p>
+        <h1 class="">About us</h1><br>
+        <p style="font-size: 25px; padding-left: 1.5rem">We are a Physiotherapy clinic located in Ottawa Ontario</p>
+        <p style="font-size: 25px; padding-left: 1.5rem">We have been around for over <strong>10 years</strong> and have successfully improved the lives of many canadians!</p>
+        <p style="font-size: 22px; padding-left: 1.5rem">Our goal is to improve the quality of life for our patients, this includes:</p>
+        <ul>
+        <li class="line" style="font-size: 20px; padding-left: 1.5rem">Improving our patients Phуѕісаl Function.</li>
+        <li class="line" style="font-size: 20px; padding-left: 1.5rem">Teaching our patients ways they can improve their physio limitations</li>
+        <li class="line" style="font-size: 20px; padding-left: 1.5rem">Minimising the Pаіn our patients have</li>
+        </ul>
     </div>
+  
+
+    
     <!--
     Tables are one of many ways to organize information easily.
     It is a good way to list of prices, or services in a business website
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
-    <table class="table table-info table-hover">
+    <div class=" p-3 my-3 border bg-light">
+    <h1>Services we Offer!</h1><br>
+    <table class="table table-info table-striped">
         <thead>
             <tr>
                 <th scope="col"><h2>Service</h2></th>
                 <th scope="col"><h2>Description</h2></th>
+                <th scope="col"><h2>Price</h2></th>
             </tr>
         </thead>
         <tbody>
+        <tr>
+                <td><img src="images/tmj.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>TMJ Therapy (Temporomandibular Joint)</td>
+                <td>TMJ disorder is a major source of discomfort, pain and impairment for many people. A TMJ disorder occurs when the joints of the jaw and the chewing muscles do not work together correctly.</td>
+                <td>40$/hour</td>
+            </tr>
+           
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td><img src="images/concussionTherapy.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>Concussion Therapy</td>
+                <td>Concussion therapy is used to decrease and eliminate pain clients may have from a concussion and accelerate their healing process.</td>
+                <td>50$/hour</td>
             </tr>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td><img src="images/orth.png" class="float-left" alt="MessageTherapy" width="100" height="100">Orthopaedic Therapy</td>
+                <td>Orthopaedic physio treats any condition related to bone, muscle and joint problems.</td>
+                <td>55$/hour</td>
             </tr>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td><img src="images/acupuncture.png" class="float-left" alt="MessageTherapy" width="100" height="100">Acupuncture</td>
+                <td>Acupuncture is a technique used to encourage natural healing, reduce or relieve pain and improve function.</td>
+                <td>60$/hour</td>
+            </tr>
+            
+             <tr>
+                <td><img src="images/massageTherapy.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>Massage Therapy</td>
+                <td>Massage therapy is used to treat clients through soft tissue manipulation while maintaining a safe and relaxing experience.</td>
+                <td>80$/hour</td>
             </tr>
         </tbody>
     </table>
-    <h1>Here is an alert!</h1>
-    <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
-    https://getbootstrap.com/docs/5.0/components/alerts/
-    -->
-    <p>This indicated something important in the page</p>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Yikes!</strong> Perhaps you left one of the fields empty for this to appear?
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-
-    <h1>Button States</h1>
-    <!--
-    Buttons can be used for submitting forms, triggering events among many other things.
-    https://getbootstrap.com/docs/5.0/components/buttons/
-    -->
-
-    <button type="button" class="btn btn-warning">Primary Button</button>
-    <button type="button" class="btn btn-warning active">Active Button</button>
-    <button type="button" class="btn btn-warning" disabled>Disabled Button</button>
-
-    <h1>Modal Example</h1>
-
-    <!-- Button trigger modal
-    We use the same button code from above, but now we can trigger a modal to appear.
-    The bootstrap tutorial includes many different types of modals that you can explore
-    https://getbootstrap.com/docs/5.0/components/modal/
-    -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    In the body we can add various components. In this example some radio buttons
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            No
-                        </label>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+ <!-- Cards are quite useful when building a website. They are a useful way to organize information.
     They can be organized using a CSS grid or other layout options.
     https://getbootstrap.com/docs/5.0/components/card/
     -->
 
-    <h1>Meet the Physicians!</h1>
+
+
+<div class="p-3 my-3 border bg-light">
+    <h1>Meet the Team!</h1><br>
     <div class="row justify-content-around">
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
+       <div class="col-sm-3">
+        <div class="card" style="width: 20rem;">
+            <div class="row">
+            <img class="picture" src="images/Giorgio.png" class="card-img-top" alt="..."></div>
             <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
-            </div>
+               <h4 class="card-title">Giorgio</h4>
+                    <!-- collapsible part -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                        See Profile
+                    </button>
+
+                    <div class="collapse" id="collapseExample1">
+                     <p>
+                     Giorgio graduated from the University of Ottawa in 2018 and has been a physiotherapist for 3 years.
+                    </p>
+                    </div>
+            </div>  </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
+        <div class="col-sm-3">
+        <div class="card" style="width: 20rem;">
+        <div class="row">
+            <img class="picture" src="images/doctor1.png" class="card-img-top" alt="..."></div>
             <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
+               <h4 class="card-title">Julie</h4>
+                    <!-- collapsible part -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                        See Profile
+                    </button>
+
+                    <div class="collapse" id="collapseExample2">
+                     <p>
+                     Julie graduated from the University of Ottawa in 2008 and has been a physiotherapist for 12 years.
+                    </p>
+                    </div>
             </div>
-        </div>
+        </div>  </div>
+        <div class="col-sm-3">
+        <div class="card" style="width: 20rem;">
+        <div class="row">
+            <img class="picture" src="images/doctor2.png" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+               <h4 class="card-title">Megan</h4>
+                    <!-- collapsible part -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                        See Profile
+                    </button>
+
+                    <div class="collapse" id="collapseExample3">
+                     <p>
+                     Megan graduated from the University of Ottawa in 2014 and has been a physiotherapist for 6 years.
+                    </p>
+                    </div>
+            </div>
+        </div>  </div>
     </div>
+      </div>
 
     <!--
     We can also use buttons to expand some hidden options
     https://getbootstrap.com/docs/5.0/components/collapse/
     -->
-    <h1>More Information</h1>
-
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button To Expand Options
-    </button>
-
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Here we have some hidden data to avoid cluttering the page with information
-        </div>
-    </div>
-
+    
     <!-- This example is using what is called an accordian, this is one of three examples
     https://getbootstrap.com/docs/5.0/components/accordion/
     -->
-
+   <div class=" p-3 my-3 border bg-light">
+    <h1>Book an Appointment!</h1><br>
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Accordion Item #1
+                    Select Service
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
+                    <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                TMJ Therapy (40$/hour)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                             Concussion Therapy (50$/hour)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option3">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Orthopaedic Therapy (55$/hour)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option4">
+                            <label class="form-check-label" for="exampleRadios2">
+                               Acupuncture (60$/hour)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option5">
+                            <label class="form-check-label" for="exampleRadios2">
+                               Massage Therapy (80$/hour)
+                        </label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Accordion Item #2
+                    Pick a date
                 </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
+                <div class="card-body">
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                <div class="form-group row">
+                        <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                        <div class="col-10">
+                            <input class="form-control" type="datetime-local" value="2021-06-04T08:30:00" id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Accordion Item #3
+                    Your contact information
                 </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can place information in this area</div>
+                 <div class="card-body">
+                        <div class="form-group row2">
+                            <div class="col-10">
+                                <input class="form-control" type="text" id="example-text-input" placeholder="Full Name">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row2">
+                            <div class="col-10">
+                                <input class="form-control" type="email" id="example-email-input" placeholder="Email">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row2">
+                            <div class="col-10">
+                                <input class="form-control" type="tel" id="example-tel-input" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary">Submit booking</button>
+                    </div>
             </div>
         </div>
     </div>
+  </div>
+    <div class=" p-3 my-3 border bg-light">
+        <h1 class="">Location</h1><br>
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.5067411880714!2d-75.65967668444605!3d45.35876847909991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0895e72b2e8b%3A0x54e909d00f9c5326!2s2210%20Bank%20St%2C%20Ottawa%2C%20ON%20K1V%201J5!5e0!3m2!1sen!2sca!4v1622933922623!5m2!1sen!2sca" 
+		          frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+        <div class="row text-center">
+		        <div class="col-md-4">
+		          <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+		          <p>2210 Bank St, Ottawa, ON</p>
+		          <p>Canada</p>
+		        </div>
+
+		        <div class="col-md-4">
+		          <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+		          <p>613-412-2156</p>
+		          <p>Mon - Sun, 7:00-19:00</p>
+		        </div>
+
+		        <div class="col-md-4">
+		          <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+		          <p>dewi@gmail.com</p>
+		        </div>
+    </div>
+
+    
 
 </div>
 <!-- here we input our javascript helper -->

@@ -1,3 +1,4 @@
+
 td{
     font-size: 25px;
 }
@@ -7,4 +8,46 @@ p{
 .btn{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.map-container-6{
+    overflow:hidden;
+    padding-bottom:26.25%;
+    position:relative;
+    height:0;
+    }
+.map-container-6 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.picture{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    padding: 10px;
+    justify-content: center;
+  }
+
+.line{
+    margin-left: 50px;
+}
+
+.row{
+    justify-content: center;
+}
+
+body {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #4bf3c1;
+}
+.accordion-button.collapsed {
+    font-size: 20px;
+}
+h1{
+    font-family: 'Comfortaa', cursive;
 }
