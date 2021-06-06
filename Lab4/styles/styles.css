@@ -51,3 +51,9 @@ body {
 h1{
     font-family: 'Comfortaa', cursive;
 }
+#signature {
+    text-align: center;
+    color: blue;
+    font-style: italic;
+    font-size: 100%;
+  }
