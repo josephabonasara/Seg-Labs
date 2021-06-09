@@ -1,7 +1,3 @@
-
-td{
-    font-size: 25px;
-}
 p{
     font-size: 20px;
 }
@@ -40,7 +36,7 @@ p{
 }
 
 body {
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     background-color: #4bf3c1;
@@ -49,7 +45,9 @@ body {
     font-size: 20px;
 }
 h1{
+    font-size: 40px;
     font-family: 'Comfortaa';
+    font-weight: 400;
 }
 #signature {
     text-align: center;
@@ -69,4 +67,9 @@ th,td {
     text-align: center;
     border: 1px solid black;
     padding: 5px;
+    font-size: 20px;
   }
+.navbar{
+    display:inherit;
+    text-align: center;
+}
