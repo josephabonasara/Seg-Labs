@@ -12,6 +12,16 @@ This will help you get started with your code!
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- added this script for the fontawesome icons on the map-->
+    
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/service.js"></script>
+
+    
     <title>Dewi's Physiotherapy Clinic</title>
     <link rel="icon" href="images/company_logo.png"
 </head>
@@ -20,20 +30,42 @@ This will help you get started with your code!
 <!--
 I store all of the page information in a container,
 Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
--->
-<div class = "container-lg">
-
-    <!--
-    Most websites now feature what is called a NavBar.
+--><!--Most websites now feature what is called a NavBar.
     The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
     https://getbootstrap.com/docs/5.0/components/navbar/
     -->
+    
+<nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#About"><img src="images/company_logo.png" alt="logo" style="width:30px;">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Services"><img src="images/company_logo.png" alt="logo" style="width:30px;">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Team"><img src="images/company_logo.png" alt="logo" style="width:30px;">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Book"><img src="images/company_logo.png" alt="logo" style="width:30px;">Book an Appointment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Location"><img src="images/company_logo.png" alt="logo" style="width:30px;">Location</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <nav class="navbar bg-dark text-white p-3 my-3">
-    <img src="images/company_logo.png" width="130" height="130">
-        <h1 class="titletop">Dewi's Physiotherapy Clinic</h1>
-    </nav>
-    <div class=" p-3 my-3 border bg-light">
+  <div class="jumbotron text-center" style="background-color: #e9ecef"><br><br><br>
+        <img src="images/company_logo.png" width="130" height="130">
+        <h1>Dewi's Physiotherapy Clinic</h1>
+    </div>
+<div class = "container-lg">
+    <div class=" p-3 my-3 bg" style="background-color: #e9ecef" id="About">
         <h1 class="">About us</h1><br>
         <p style="font-size: 20px; padding-left: 1.5rem">We are a local Physiotherapy clinic currently based in Ottawa. Our main center is located at <strong><u>2210 Bank St, Ottawa, ON</u></strong>.</p>
         <p style="font-size: 20px; padding-left: 1.5rem">We have been around for over 10 years and have successfully improved the lives of many canadians!</p>
@@ -53,7 +85,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     It is a good way to list of prices, or services in a business website
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
-    <div class=" p-3 my-3 border bg-light">
+    <div class=" p-3 my-3 bg" style="background-color: #e9ecef" id="Services">
     <h1>Services we Offer!</h1><br>
     <table class="table table-info table-striped">
         <thead>
@@ -101,7 +133,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
 
 
-<div class="p-3 my-3 border bg-light">
+<div class=" p-3 my-3 bg" style="background-color: #e9ecef"id="Team">
     <h1>Meet the Team!</h1><br>
     <div class="row justify-content-around">
        <div class="col-sm-3">
@@ -169,7 +201,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <!-- This example is using what is called an accordian, this is one of three examples
     https://getbootstrap.com/docs/5.0/components/accordion/
     -->
-   <div class=" p-3 my-3 border bg-light">
+   <div class=" p-3 my-3 bg" style="background-color: #e9ecef" id="Book">
     <h1>Book an Appointment!</h1><br>
     <div class="accordion accordion-flush border bg-dark" id="accordionFlushExample">
         <div class="accordion-item">
@@ -215,13 +247,48 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 </div>
             </div>
         </div>
+
         <div class="accordion-item">
             <h2 class="accordion-header border bg-dark" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Select Expert
+                </button>
+            </h2>
+           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                            <img src="images/Giorgio.png" class="float-left" alt="..." width="55" height="55"> Giorgio Frigo
+                            </label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                            <img src="images/doctor1.png" class="float-left" alt="..." width="55" height="55"> Julie Lope
+                        </label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option3">
+                            <label class="form-check-label" for="exampleRadios1">
+                            <img src="images/doctor2.png" class="float-left" alt="..." width="55" height="55"> Megan Kole
+                            </label>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header border bg-dark" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Pick a date
                 </button>
             </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                 <div class="card-body">
                         <!-- Bootstrap has various input components. Some examples are given here: -->
                         <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
@@ -235,37 +302,44 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header border bg-dark" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <h2 class="accordion-header border bg-dark" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                     Your contact information
                 </button>
             </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                  <div class="card-body">
+                
                         <div class="form-group row2">
                             <div class="col-10">
-                                <input class="form-control" type="text" id="example-text-input" placeholder="Full Name">
+                                <input class="form-control" type="text" id="FullName" placeholder="Full Name" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row2">
+                           <div class="col-10">
+                                <input class="form-control" type="email" id="email" placeholder="Email" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
                         <br>
                         <div class="form-group row2">
                             <div class="col-10">
-                                <input class="form-control" type="email" id="example-email-input" placeholder="Email">
+                                <input class="form-control" type="tele" id="phone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
-                        </div>
-                        <br>
-                        <div class="form-group row2">
-                            <div class="col-10">
-                                <input class="form-control" type="tel" id="example-tel-input" placeholder="Phone Number">
-                            </div>
-                        </div>
                         <button type="button" class="btn btn-primary">Submit booking</button>
-                    </div>
+                 </div>
             </div>
         </div>
     </div>
-  </div>
-    <div class=" p-3 my-3 border bg-light">
+  </div>  
+</div>
+    <div class=" p-3 my-3 bg" style="background-color: #e9ecef" id="Location">
         <h1 class="">Location</h1><br>
         <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.5067411880714!2d-75.65967668444605!3d45.35876847909991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0895e72b2e8b%3A0x54e909d00f9c5326!2s2210%20Bank%20St%2C%20Ottawa%2C%20ON%20K1V%201J5!5e0!3m2!1sen!2sca!4v1622933922623!5m2!1sen!2sca" 

@@ -44,6 +44,7 @@ body {
     padding: 0;
     background-color: #4bf3c1;
 }
+
 .accordion-button.collapsed {
     font-family:sans-serif;
     font-size: 20px;
@@ -82,3 +83,9 @@ th,td {
 .card-title{
     font-size: 20px;
 }
+nav#navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
