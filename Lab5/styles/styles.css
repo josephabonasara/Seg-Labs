@@ -42,7 +42,7 @@ body {
     font-size: 20px;
     margin: 0;
     padding: 0;
-    background-color: #4bf3c1;
+    background-color: rgb(74, 144, 226);
 }
 
 .accordion-button.collapsed {
@@ -56,7 +56,7 @@ h1{
 }
 #signature {
     text-align: center;
-    color: blue;
+    color: rgb(25, 221, 104);
     font-family:sans-serif;
     font-style: italic;
     font-size: 100%;
@@ -88,4 +88,5 @@ nav#navbar {
     width: 100%;
     z-index: 999;
 }
+
 
