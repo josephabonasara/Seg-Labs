@@ -20,7 +20,12 @@ This will help you get started with your code!
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="scripts/service.js"></script>
-
+    
+    
+    <link href="datetimepicker-2.5.20/build/jquery.datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="datetimepicker-2.5.20/jquery.datetimepicker.css"/>
+    <script src="datetimepicker-2.5.20/jquery.js"></script>
+    <script src="datetimepicker-2.5.20/build/jquery.datetimepicker.full.min.js"></script>
     
     <title>Dewi's Physiotherapy Clinic</title>
     <link rel="icon" href="images/company_logo.png"
@@ -204,16 +209,17 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     -->
    <div class=" p-3 my-3 bg" style="background-color: #eff0ef" id="Book">
     <h1><img src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" style="width:50px;height:50px;"/> Book an Appointment!</h1><br>
-    <div class="accordion accordion-flush border bg-dark" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header border bg-dark" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                <img src="https://img.icons8.com/ios-filled/50/4a90e2/alluminium-massagetable.png" style="width:30px;height:30px;"/> &nbsp; Select Service
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
+    <a data-bs-toggle="modal" data-id="TMJ Treatment" title="Book an Appointment" class="open-bookAppointment btn btn-primary titlefont" href="#bookappointment">Book an Appointment</a>
+    </div>
+    <div class="modal  fade" id="bookappointment" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <form id="form">    
+                <div class="modal-body">
+                <h3><img src="https://img.icons8.com/ios-filled/50/4a90e2/alluminium-massagetable.png" style="width:30px;height:30px;"/> &nbsp; Select Service</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">
@@ -246,133 +252,104 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header border bg-dark" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                <img src="https://img.icons8.com/material-sharp/48/4a90e2/user-group-man-woman.png" style="width:30px;height:30px;"/> &nbsp;    Select Expert
-                </button>
-            </h2>
-           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <br>
+           
+                <h3><img src="https://img.icons8.com/material-sharp/48/4a90e2/user-group-man-woman.png" style="width:30px;height:30px;"/> &nbsp;  Select Expert</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
+                        <div class="form-check" id = "expert">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">
                             <img src="images/Giorgio.png" class="float-left" alt="..." width="55" height="55"> Giorgio Frigo
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option2">
                             <label class="form-check-label" for="exampleRadios2">
                             <img src="images/doctor1.png" class="float-left" alt="..." width="55" height="55"> Julie Lope
                         </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option3">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option3">
                             <label class="form-check-label" for="exampleRadios1">
                             <img src="images/doctor2.png" class="float-left" alt="..." width="55" height="55"> Megan Kole
                             </label>
                         </div>
                     </div>
                 </div>
-        </div>
-</div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header border bg-dark" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                <img src="https://img.icons8.com/pastel-glyph/64/4a90e2/date-to--v2.png" style="width:30px;height:30px;"/> &nbsp; Pick a date
-                </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="card-body">
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                <div class="form-group row">
-                        <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                        <div class="col-10">
-                            <input class="form-control" type="datetime-local" value="2021-06-04T08:30:00" id="dateTimeInput">
+            <br>
+                <h3><img src="https://img.icons8.com/pastel-glyph/64/4a90e2/date-to--v2.png" style="width:30px;height:30px;"/> &nbsp; Pick a Date</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
+                        <div id = "holdCalendar" class="input-group">
+                            <div class="input-group-prepend ">
+                                <button type = "button" id = "toggle" class ="input-group-text myhover2"><img src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" style="width:30px;height:30px;"/></button>
+                            </div>
+                            <input required autocomplete="off" id="datetime" type="datetime-local" class="form-control" value="2021-06-04T08:30:00" >
+                        </div>
+                    </div>
+                </div>
+            <br>
+                <h3><img src="https://img.icons8.com/metro/26/4a90e2/contacts.png" style="width:30px;height:30px;"/> &nbsp; Your contact infomation</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
+                        <div class="form-group row2">
+                            <div class="col-10">
+                            <label for="phone">Full Name:</label>
+                            <input required type="text" class="form-control myhover inputBooking" placeholder="Full Name" id="fullName" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row2">
+                           <div class="col-10">
+                            <label for="phone">Email Address:</label>
+                               <input required type="email" class="form-control myhover inputBooking" placeholder="Email Address" id="email" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row2">
+                            <div class="col-10">
+                              <label for="phone">Phone Number: (xxx-xxx-xxxx)</label>
+                              <input id = "#phonenumber" required type="tel" class="form-control myhover inputBooking" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="xxx-xxx-xxxx" id="phone" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
                             </div>
                         </div>
                     </div>
+                </div>
+            
+
+
+                                                     
+            <br>
+      
+            <h3><img src="https://img.icons8.com/android/24/4a90e2/bank-card-back-side.png" style="width:30px;height:30px;"/> &nbsp; Payment</h3>
+            <hr>
+            <div style="margin-bottom: 10px;" class="row">
+                <div class="card-body">
+                    <div style="margin-top: 15px;" class="form-group">
+                        <label for="email"> Credit card-number: (xxxx xxxx xxxx xxxx)</label>
+                        <input required type="tel" maxlength="19" pattern="[0-9\s]{13,19}" class="form-control myhover inputBooking" placeholder="xxxx xxxx xxxx xxxx" id="card" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header border bg-dark" id="flush-headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                <img src="https://img.icons8.com/metro/26/4a90e2/contacts.png" style="width:30px;height:30px;"/> &nbsp; Your contact information
-                </button>
-            </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                 <div class="card-body">
-                
-                        <div class="form-group row2">
-                            <div class="col-10">
-                                <input class="form-control" type="text" id="FullName" placeholder="Full Name" required>
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group row2">
-                           <div class="col-10">
-                                <input class="form-control" type="email" id="email" placeholder="Email" required>
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group row2">
-                            <div class="col-10">
-                                <input class="form-control" type="tele" id="phone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                            </div>
-                        <button type="button" class="btn btn-primary">Submit booking</button>
-                 </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header border bg-dark" id="flush-headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                <img src="https://img.icons8.com/android/24/4a90e2/bank-card-back-side.png" style="width:30px;height:30px;"/> &nbsp; Payment
-                </button>
-            </h2>
-            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                 <div class="card-body">
-                
-                        <div class="form-group row2">
-                            <div class="col-10">
-                                <label for="cc-number">Credit card Number:</label><br>  <!-- regex for credit card number found at https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests -->
-                                <input class="form-control" type="text" id="cc-number" pattern="^4[0-9]{6,}$" required>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group row2">
-                           <div class="col-10">
-                                <label for="cc-expiration">Expiration</label><br>
-                                <input class="form-control" type="text" id="cc-expiration" required>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group row2">
-                            <div class="col-10">
-                                <label for="cc-cvv">Security Code</label><br>
-                                <input class="form-control" type="text" id="cc-cvv" required>
-                            </div>
-                        <button type="button" class="btn btn-primary">Submit booking</button>
-                 </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id = "finalbook" style = " " type="submit" class="btn btn-primary ">Book Appointment</button>
+                </div>
+
+
+            </form>
             </div>
         </div>
     </div>
-  </div>  
-</div>
-</div>
+    
+
     <div class=" p-3 my-3 bg" style="background-color: #eff0ef" id="Location">
         <h1 class=""><img src="https://img.icons8.com/ios-filled/50/4a90e2/marker.png" style="width:50px;height:50px;"/> Location</h1><br>
         <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
