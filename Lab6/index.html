@@ -1,0 +1,387 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- added this script for the fontawesome icons on the map-->
+    
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/service.js"></script>
+    
+    
+    <link href="datetimepicker-2.5.20/build/jquery.datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="datetimepicker-2.5.20/jquery.datetimepicker.css"/>
+    <script src="datetimepicker-2.5.20/jquery.js"></script>
+    <script src="datetimepicker-2.5.20/build/jquery.datetimepicker.full.min.js"></script>
+    
+    <title>Dewi's Physiotherapy Clinic</title>
+    <link rel="icon" href="images/company_logo.png"
+</head>
+<body>
+
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+--><!--Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+    
+<nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#About"><img src="https://img.icons8.com/ios-filled/50/4a90e2/information.png" alt="logo" style="width:30px;"> About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Services"><img src="https://img.icons8.com/ios-filled/50/4a90e2/alluminium-massagetable.png" alt="logo" style="width:30px;"> Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Team"><img src="https://img.icons8.com/material-sharp/48/4a90e2/user-group-man-woman.png" alt="logo" style="width:30px;"> Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Book"><img src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" alt="logo" style="width:30px;"/> Book an Appointment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Location"><img src="https://img.icons8.com/ios-filled/50/4a90e2/marker.png" alt="logo" style="width:30px;"> Location</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class = "container-lg"> <br><br>
+  <div class="jumbotron text-center" style="background-color: #eff0ef"><br><br><br>
+        <img src="images/company_logo.png" width="130" height="130">
+        <h1>Dewi's Physiotherapy Clinic</h1><br>
+    </div>
+
+    <div class=" p-3 my-3 bg" style="background-color: #eff0ef" id="About">
+        <h1 class=""><img src="https://img.icons8.com/ios-filled/50/4a90e2/information.png" style="width:50px;height:50px;"/> About us</h1><br>
+        <p style="font-size: 20px; padding-left: 1.5rem">We are a local Physiotherapy clinic currently based in Ottawa. Our main center is located at <strong><u>2210 Bank St, Ottawa, ON</u></strong>.</p>
+        <p style="font-size: 20px; padding-left: 1.5rem">We have been around for over 10 years and have successfully improved the lives of many canadians!</p>
+        <p style="font-size: 20px; padding-left: 1.5rem">Our goal is to improve the quality of life for our patients, this includes:</p>
+        <ul>
+        <li class="line" style="font-size: 20px; padding-left: 1.5rem">Improving our patients phуѕісаl function.</li>
+        <li class="line" style="font-size: 20px; padding-left: 1.5rem">Teaching our patients ways they can improve their physio limitations.</li>
+        <li class="line" style="font-size: 20px; padding-left: 1.5rem">Minimising the pаіn our patients have.</li>
+        </ul>
+        <p style="font-size: 20px; padding-left: 1.5rem">If you wish to book an appointment, please fill out the information in the <b>Book an Appointment!</b> section at the bottom of the page and we will get back to you as soon as possible.</p>
+    </div>
+  
+
+    
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+    <div class=" p-3 my-3 bg" style="background-color: #eff0ef" id="Services">
+    <h1><img src="https://img.icons8.com/ios-filled/50/4a90e2/alluminium-massagetable.png" style="width:50px;height:50px;"/> Services we Offer!</h1><br>
+    <table class="table table-info table-striped">
+        <thead>
+            <tr>
+                <th scope="col"><h2>Service</h2></th>
+                <th scope="col"><h2>Description</h2></th>
+                <th scope="col"><h2>Price</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+                <td><img src="images/tmj.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>TMJ Therapy</td>
+                <td>TMJ disorder is a major source of discomfort, pain and impairment for many people. A TMJ disorder occurs when the joints of the jaw and the chewing muscles do not work together correctly.</td>
+                <td>40$/hour</td>
+            </tr>
+           
+            <tr>
+                <td><img src="images/concussionTherapy.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>Concussion Therapy</td>
+                <td>Concussion therapy is used to decrease and eliminate pain clients may have from a concussion and accelerate their healing process.</td>
+                <td>50$/hour</td>
+            </tr>
+            <tr>
+                <td><img src="images/orth.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>Orthopaedic Therapy</td>
+                <td>Orthopaedic physio treats any condition related to bone, muscle and joint problems.</td>
+                <td>55$/hour</td>
+            </tr>
+            <tr>
+                <td><img src="images/acupuncture.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>Acupuncture</td>
+                <td>Acupuncture is a technique used to encourage natural healing, reduce or relieve pain and improve function.</td>
+                <td>60$/hour</td>
+            </tr>
+            
+             <tr>
+                <td><img src="images/massageTherapy.png" class="float-left" alt="MessageTherapy" width="100" height="100"><br>Massage Therapy</td>
+                <td>Massage therapy is used to treat clients through soft tissue manipulation while maintaining a safe and relaxing experience.</td>
+                <td>80$/hour</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+ <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+
+
+
+<div class=" p-3 my-3 bg" style="background-color: #eff0ef"id="Team">
+    <h1><img src="https://img.icons8.com/material-sharp/48/4a90e2/user-group-man-woman.png" style="width:50px;height:50px;"/> Meet the Team!</h1><br>
+    <div class="row justify-content-around">
+       <div class="col-sm-3">
+        <div class="card" style="width: 20rem;">
+            <div class="row">
+            <img class="picture" src="images/Giorgio.png" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+               <h4 class="card-title">Giorgio Frigo</h4>
+                    <!-- collapsible part -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                        See Profile
+                    </button>
+
+                    <div class="collapse" id="collapseExample1">
+                     <p>
+                     Giorgio graduated from the University of Ottawa in 2018 and has been a physiotherapist for 3 years.
+                    </p>
+                    </div>
+            </div>  </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card" style="width: 20rem;">
+        <div class="row">
+            <img class="picture" src="images/doctor1.png" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+               <h4 class="card-title">Julie Lope</h4>
+                    <!-- collapsible part -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                        See Profile
+                    </button>
+
+                    <div class="collapse" id="collapseExample2">
+                     <p>
+                     Julie graduated from the University of Ottawa in 2008 and has been a physiotherapist for 12 years.
+                    </p>
+                    </div>
+            </div>
+        </div>  </div>
+        <div class="col-sm-3">
+        <div class="card" style="width: 20rem;">
+        <div class="row">
+            <img class="picture" src="images/doctor2.png" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+               <h4 class="card-title">Megan Kole</h4>
+                    <!-- collapsible part -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                        See Profile
+                    </button>
+
+                    <div class="collapse" id="collapseExample3">
+                     <p>
+                     Megan graduated from the University of Ottawa in 2014 and has been a physiotherapist for 6 years.
+                    </p>
+                    </div>
+            </div>
+        </div>  </div>
+    </div>
+      </div>
+
+    <!--
+    We can also use buttons to expand some hidden options
+    https://getbootstrap.com/docs/5.0/components/collapse/
+    -->
+    
+    <!-- This example is using what is called an accordian, this is one of three examples
+    https://getbootstrap.com/docs/5.0/components/accordion/
+    -->
+   <div class=" p-3 my-3 bg" style="background-color: #eff0ef" id="Book">
+    <h1><img src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" style="width:50px;height:50px;"/> Book an Appointment!</h1><br>
+    <a data-bs-toggle="modal" data-id="TMJ Treatment" title="Book an Appointment" class="open-bookAppointment btn btn-primary titlefont" href="#bookappointment">Book an Appointment</a>
+    </div>
+    <div class="modal  fade" id="bookappointment" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <form id="form">    
+                <div class="modal-body">
+                <h3><img src="https://img.icons8.com/ios-filled/50/4a90e2/alluminium-massagetable.png" style="width:30px;height:30px;"/> &nbsp; Select Service</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                TMJ Therapy (40$/hour)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                             Concussion Therapy (50$/hour)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option3">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Orthopaedic Therapy (55$/hour)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option4">
+                            <label class="form-check-label" for="exampleRadios2">
+                               Acupuncture (60$/hour)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option5">
+                            <label class="form-check-label" for="exampleRadios2">
+                               Massage Therapy (80$/hour)
+                        </label>
+                        </div>
+                    </div>
+                </div>
+            <br>
+           
+                <h3><img src="https://img.icons8.com/material-sharp/48/4a90e2/user-group-man-woman.png" style="width:30px;height:30px;"/> &nbsp;  Select Expert</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
+                        <div class="form-check" id = "expert">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                            <img src="images/Giorgio.png" class="float-left" alt="..." width="55" height="55"> Giorgio Frigo
+                            </label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                            <img src="images/doctor1.png" class="float-left" alt="..." width="55" height="55"> Julie Lope
+                        </label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option3">
+                            <label class="form-check-label" for="exampleRadios1">
+                            <img src="images/doctor2.png" class="float-left" alt="..." width="55" height="55"> Megan Kole
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            <br>
+                <h3><img src="https://img.icons8.com/pastel-glyph/64/4a90e2/date-to--v2.png" style="width:30px;height:30px;"/> &nbsp; Pick a Date</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
+                        <div id = "holdCalendar" class="input-group">
+                            <div class="input-group-prepend ">
+                                <button type = "button" id = "toggle" class ="input-group-text myhover2"><img src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" style="width:30px;height:30px;"/></button>
+                            </div>
+                            <input required autocomplete="off" id="datetime" type="datetime-local" class="form-control" value="2021-06-04T08:30:00" >
+                        </div>
+                    </div>
+                </div>
+            <br>
+                <h3><img src="https://img.icons8.com/metro/26/4a90e2/contacts.png" style="width:30px;height:30px;"/> &nbsp; Your contact infomation</h3>
+                  <hr>
+                    <div style="margin-bottom: 10px;" class="row">
+                        <div class="card-body">
+                        <div class="form-group row2">
+                            <div class="col-10">
+                            <label for="phone">Full Name:</label>
+                            <input required type="text" class="form-control myhover inputBooking" placeholder="Full Name" id="fullName" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row2">
+                           <div class="col-10">
+                            <label for="phone">Email Address:</label>
+                               <input required type="email" class="form-control myhover inputBooking" placeholder="Email Address" id="email" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row2">
+                            <div class="col-10">
+                              <label for="phone">Phone Number: (xxx-xxx-xxxx)</label>
+                              <input id = "#phonenumber" required type="tel" class="form-control myhover inputBooking" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="xxx-xxx-xxxx" id="phone" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+
+                                                     
+            <br>
+      
+            <h3><img src="https://img.icons8.com/android/24/4a90e2/bank-card-back-side.png" style="width:30px;height:30px;"/> &nbsp; Payment</h3>
+            <hr>
+            <div style="margin-bottom: 10px;" class="row">
+                <div class="card-body">
+                    <div style="margin-top: 15px;" class="form-group">
+                        <label for="email"> Credit card-number: (xxxx xxxx xxxx xxxx)</label>
+                        <input required type="tel" maxlength="19" pattern="[0-9\s]{13,19}" class="form-control myhover inputBooking" placeholder="xxxx xxxx xxxx xxxx" id="card" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id = "finalbook" style = " " type="submit" class="btn btn-primary ">Book Appointment</button>
+                </div>
+
+
+            </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class=" p-3 my-3 bg" style="background-color: #eff0ef" id="Location">
+        <h1 class=""><img src="https://img.icons8.com/ios-filled/50/4a90e2/marker.png" style="width:50px;height:50px;"/> Location</h1><br>
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.5067411880714!2d-75.65967668444605!3d45.35876847909991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0895e72b2e8b%3A0x54e909d00f9c5326!2s2210%20Bank%20St%2C%20Ottawa%2C%20ON%20K1V%201J5!5e0!3m2!1sen!2sca!4v1622933922623!5m2!1sen!2sca" 
+		          frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+        <div class="row text-center">
+		        <div class="col-md-4">
+		          <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+		          <p>2210 Bank St, Ottawa, ON</p>
+		          <p>Canada</p>
+		        </div>
+
+		        <div class="col-md-4">
+		          <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+		          <p>613-412-2156</p>
+		          <p>Mon - Sun, 7:00-19:00</p>
+		        </div>
+
+		        <div class="col-md-4">
+		          <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+		          <p>dewi@gmail.com</p>
+		        </div>
+    </div>
+
+    
+
+</div>
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<footer>
+    <p id="signature"> Website designed by Dewi </p>
+</footer>
+</body>
+</html>

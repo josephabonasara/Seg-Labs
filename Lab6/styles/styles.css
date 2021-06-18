@@ -1,0 +1,96 @@
+p{
+    font-size: 20px;
+    font-family:sans-serif;
+}
+.btn{
+    font-family:sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.map-container-6{
+    overflow:hidden;
+    padding-bottom:26.25%;
+    position:relative;
+    height:0;
+    }
+.map-container-6 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.picture{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    padding: 10px;
+    justify-content: center;
+  }
+
+.line{
+    margin-left: 50px;
+}
+
+.row{
+    justify-content: center;
+}
+
+body {
+    font-family:sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(74, 144, 226);
+}
+
+.accordion-button.collapsed {
+    font-family:sans-serif;
+    font-size: 20px;
+}
+h1{
+    font-size: 40px;
+    font-family: 'Comfortaa';
+    font-weight: 400;
+}
+#signature {
+    text-align: center;
+    color: rgb(25, 221, 104);
+    font-family:sans-serif;
+    font-style: italic;
+    font-size: 100%;
+}
+
+table 
+{
+    table-layout:fixed;
+    width:100%;
+}
+
+th,td {
+    font-family:sans-serif;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 20px;
+  }
+.navbar{
+    display:inherit;
+    text-align: center;
+}
+.card-title{
+    font-size: 20px;
+}
+nav#navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+
+hr{
+    padding: 0px;
+    margin: 0px;    
+  }
