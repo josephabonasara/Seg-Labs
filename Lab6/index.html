@@ -22,10 +22,10 @@ This will help you get started with your code!
     <script src="scripts/service.js"></script>
     
     
-    <link href="datetimepicker-2.5.20/build/jquery.datetimepicker.min.css"/>
-    <link rel="stylesheet" type="text/css" href="datetimepicker-2.5.20/jquery.datetimepicker.css"/>
-    <script src="datetimepicker-2.5.20/jquery.js"></script>
-    <script src="datetimepicker-2.5.20/build/jquery.datetimepicker.full.min.js"></script>
+   <link href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/jquery-datetimepicker/jquery.datetimepicker.css"/>
+    <script src="node_modules/jquery-datetimepicker/jquery.js"></script>
+    <script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
     
     <title>Dewi's Physiotherapy Clinic</title>
     <link rel="icon" href="images/company_logo.png"
@@ -283,13 +283,13 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             <br>
                 <h3><img src="https://img.icons8.com/pastel-glyph/64/4a90e2/date-to--v2.png" style="width:30px;height:30px;"/> &nbsp; Pick a Date</h3>
                   <hr>
-                    <div style="margin-bottom: 10px;" class="row">
+                    <div style="margin-bottom: 10px;" class="form-group">
                         <div class="card-body">
                         <div id = "holdCalendar" class="input-group">
                             <div class="input-group-prepend ">
-                                <button type = "button" id = "toggle" class ="input-group-text myhover2"><img src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" style="width:30px;height:30px;"/></button>
+                                <button type = "button" id = "toggle" class ="input-group-text myhover2"><img id = "calendarlogo" src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" style="width:30px;height:30px;"/></button>
                             </div>
-                            <input required autocomplete="off" id="datetime" type="datetime-local" class="form-control" value="2021-06-04T08:30:00" >
+                            <input required autocomplete="off" id="datetimepicker" type="text" class="form-control  inputBooking myhover" >
                         </div>
                     </div>
                 </div>
@@ -331,13 +331,14 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             <div style="margin-bottom: 10px;" class="row">
                 <div class="card-body">
                     <div style="margin-top: 15px;" class="form-group">
-                        <label for="email"> Credit card-number: (xxxx xxxx xxxx xxxx)</label>
-                        <input required type="tel" maxlength="19" pattern="[0-9\s]{13,19}" class="form-control myhover inputBooking" placeholder="xxxx xxxx xxxx xxxx" id="card" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+                     <label title="We require your credit card information in order to reserve your spot.">
+                        Credit card-number: (xxxx xxxx xxxx xxxx)
+                        </label>
+                        <input required type="tel" maxlength="19" data-toggle="tooltip" pattern="[0-9\s]{13,19}" class="form-control myhover inputBooking" placeholder="xxxx xxxx xxxx xxxx" id="card" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}">
                     </div>
                 </div>
             </div>
         </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button id = "finalbook" style = " " type="submit" class="btn btn-primary ">Book Appointment</button>

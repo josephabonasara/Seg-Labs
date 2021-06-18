@@ -12,37 +12,37 @@ var times = {
 
 
 $(document).ready(function(){
+  
 
-    var expert = $("#expert");
-    var calendar = $("#datetime");
-    date();
+    datefunc();
 
-    $("#datetime").datetime({
-        disabledWeekDays: filter
+    $("#datetimepicker").datetimepicker({
+        disabledWeekDays: currentDayFilter
     });
     
     $('#toggle').on("click", function(){
-        $('#datetime').datetime("show");
+        $('#datetimepicker').datetimepicker("show");
     });
 
-    $("#expert").on("change", function(){
+    $("#selectPro").on("change", function(){
         
-        $('#datetime').datetime("destroy");
-        date();
+        $('#datetimepicker').datetimepicker("destroy");
+        datefunc();
         var container = document.getElementById("holdCalendar");
         var content = container.innerHTML;
         container.innerHTML= " "; 
         container.innerHTML= content; 
-        $("#datetime").datetime({
-            disabledWeekDays: filter
+        $("#datetimepicker").datetimepicker({
+            // value:'2021-06-11',
+            disabledWeekDays: currentDayFilter
         });
         $('#toggle').on("click", function(){
-            $('#datetime').datetime("show");
+            $('#datetimepicker').datetimepicker("show");
         });  
     });
 
     
-    function date(){
+    function datefunc(){
         filter = times[ expert.children("option:selected").text()];
         return filter;
     };
