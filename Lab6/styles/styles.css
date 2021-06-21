@@ -7,6 +7,7 @@ p{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .map-container-6{
     overflow:hidden;
     padding-bottom:26.25%;
@@ -95,3 +96,7 @@ hr{
     padding: 0px;
     margin: 0px;    
   }
+  div.ui-tooltip {
+    font-size: 16px;
+    max-width: 300px;
+}

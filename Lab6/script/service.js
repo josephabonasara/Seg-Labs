@@ -1,52 +1,69 @@
+var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
+const setDateFormat = "mm/dd/yy";
 
-let filter;
-
-var times = {
-    "Any": anytime [6,0],
-    "Giorgio Frigo": [5,1,2,3],
-    "Julie Lope": [0,2,4,6],
-    "Megan Kole": [1,2,3,4]
+var giorgio = {
+    name: "Giorgio",
+    value:1,
+    dayOff: [1,3],
+};
+var julie = 
+{
+    name: "Julie",
+    value:2,
+    dayOff: [1,2,6],
+};
+var megan = 
+{
+    name: "Megan",
+    value:3,
+    dayOff: [4,5],
 };
 
 
 
-
+function disableDates(date) {
+    
+    //var therapist = document.getElementsByName("exampleRadios2").value;
+    
+    var els = document.getElementsByName('exampleRadios2');
+    for (var i=0;i<els.length;i++){
+      if ( els[i].checked ) {
+        var therapist =els[i].value;
+      }
+    }
+    console.log(therapist);
+    var dayOFF;
+    if(therapist == giorgio.value){
+        dayOFF = giorgio.dayOff;
+    }else if(therapist == julie.value){
+        dayOFF = julie.dayOff;
+    }else if(therapist == megan.value){
+        dayOFF = megan.dayOff;
+    }
+    
+    if (date.getDay() == 0 || dayOFF.includes(date.getDay()))
+        return [false];
+    
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [unavailableDates.indexOf(string) == -1]
+}
 $(document).ready(function(){
+
+
+
+    $("#dateInput").datepicker(
+        {
+            dateFormat: setDateFormat,
+            minDate: new Date('07/01/2020'),  
+            maxDate: '+4M',
+            beforeShowDay: disableDates
+        }   
+    );
   
 
-    datefunc();
-
-    $("#datetimepicker").datetimepicker({
-        disabledWeekDays: currentDayFilter
+    $("#cc-number").tooltip({
+        classes: {
+          "ui-tooltip": "highlight"
+        }
     });
-    
-    $('#toggle').on("click", function(){
-        $('#datetimepicker').datetimepicker("show");
-    });
-
-    $("#selectPro").on("change", function(){
-        
-        $('#datetimepicker').datetimepicker("destroy");
-        datefunc();
-        var container = document.getElementById("holdCalendar");
-        var content = container.innerHTML;
-        container.innerHTML= " "; 
-        container.innerHTML= content; 
-        $("#datetimepicker").datetimepicker({
-            // value:'2021-06-11',
-            disabledWeekDays: currentDayFilter
-        });
-        $('#toggle').on("click", function(){
-            $('#datetimepicker').datetimepicker("show");
-        });  
-    });
-
-    
-    function datefunc(){
-        filter = times[ expert.children("option:selected").text()];
-        return filter;
-    };
-
-
-
 });

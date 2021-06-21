@@ -19,14 +19,10 @@ This will help you get started with your code!
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="scripts/service.js"></script>
+    <script src="script/service.js"></script>
     
     
-   <link href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css"/>
-    <link rel="stylesheet" type="text/css" href="node_modules/jquery-datetimepicker/jquery.datetimepicker.css"/>
-    <script src="node_modules/jquery-datetimepicker/jquery.js"></script>
-    <script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
-    
+
     <title>Dewi's Physiotherapy Clinic</title>
     <link rel="icon" href="images/company_logo.png"
 </head>
@@ -259,21 +255,21 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                     <div style="margin-bottom: 10px;" class="row">
                         <div class="card-body">
                         <div class="form-check" id = "expert">
-                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="1" checked>
                             <label class="form-check-label" for="exampleRadios1">
                             <img src="images/Giorgio.png" class="float-left" alt="..." width="55" height="55"> Giorgio Frigo
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option2">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="2">
                             <label class="form-check-label" for="exampleRadios2">
                             <img src="images/doctor1.png" class="float-left" alt="..." width="55" height="55"> Julie Lope
                         </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option3">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="3">
                             <label class="form-check-label" for="exampleRadios1">
                             <img src="images/doctor2.png" class="float-left" alt="..." width="55" height="55"> Megan Kole
                             </label>
@@ -285,12 +281,11 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                   <hr>
                     <div style="margin-bottom: 10px;" class="form-group">
                         <div class="card-body">
-                        <div id = "holdCalendar" class="input-group">
-                            <div class="input-group-prepend ">
-                                <button type = "button" id = "toggle" class ="input-group-text myhover2"><img id = "calendarlogo" src="https://img.icons8.com/ios-filled/50/4a90e2/calendar--v1.png" style="width:30px;height:30px;"/></button>
+                            <div class="form-group row">
+                                
+                                    <input required class="form-control" type="text" value="" id="dateInput">
+                            
                             </div>
-                            <input required autocomplete="off" id="datetimepicker" type="text" class="form-control  inputBooking myhover" >
-                        </div>
                     </div>
                 </div>
             <br>
@@ -331,10 +326,10 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             <div style="margin-bottom: 10px;" class="row">
                 <div class="card-body">
                     <div style="margin-top: 15px;" class="form-group">
-                     <label title="We require your credit card information in order to reserve your spot.">
+                     <label >
                         Credit card-number: (xxxx xxxx xxxx xxxx)
                         </label>
-                        <input required type="tel" maxlength="19" data-toggle="tooltip" pattern="[0-9\s]{13,19}" class="form-control myhover inputBooking" placeholder="xxxx xxxx xxxx xxxx" id="card" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}">
+                        <input required type="text" title="We ask for your credit card number in case of no-show, 20$ will be charged." maxlength="19"  pattern="[0-9\s]{13,19}" class="form-control" placeholder="xxxx xxxx xxxx xxxx" id="cc-number" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}">
                     </div>
                 </div>
             </div>
