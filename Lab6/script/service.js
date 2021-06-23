@@ -2,19 +2,19 @@ var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
 const setDateFormat = "mm/dd/yy";
 
 var giorgio = {
-    name: "Giorgio",
+    name: "Giorgio Frigo",
     value:1,
     dayOff: [1,3],
 };
 var julie = 
 {
-    name: "Julie",
+    name: "Julie Lope",
     value:2,
     dayOff: [1,2,6],
 };
 var megan = 
 {
-    name: "Megan",
+    name: "Megan Kole",
     value:3,
     dayOff: [4,5],
 };
@@ -67,3 +67,16 @@ $(document).ready(function(){
         }
     });
 });
+
+document.getElementById("bookform").onsubmit = submitfunc;
+
+function submitfunc() {
+    var els = document.getElementsByName('exampleRadios2');
+    for (var i=0;i<els.length;i++){
+      if ( els[i].checked ) {
+        var therapist =els[i].name;
+      }
+    }
+    var calendar = $("#dateinput");
+    alert("Your appointment has been booked successfully. Appointment details:\n" + "Therapist: "+ therapist+ "\n Date: "+ calendar.val());
+};
