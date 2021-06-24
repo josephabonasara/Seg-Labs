@@ -25,6 +25,7 @@ This will help you get started with your code!
 
     <title>Dewi's Physiotherapy Clinic</title>
     <link rel="icon" href="images/company_logo.png"
+    
 </head>
 <body>
 
@@ -41,7 +42,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ulcentered">
             <li class="nav-item">
                 <a class="nav-link" href="#About"><img src="https://img.icons8.com/ios-filled/50/4a90e2/information.png" alt="logo" style="width:30px;"> About us</a>
             </li>
@@ -68,7 +69,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 <div class = "container-lg"> <br><br>
   <div class="jumbotron text-center" style="background-color: #eff0ef"><br><br><br>
         <img src="images/company_logo.png" width="130" height="130">
-        <h1>Dewi's Physiotherapy Clinic</h1><br>
+        <h1 style="font-size: 50px;">Dewi's Physiotherapy Clinic</h1><br>
     </div>
 
     <div class=" p-3 my-3 bg" style="background-color: #eff0ef" id="About">
@@ -287,7 +288,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         <div class="card-body">
                             <div class="form-group row">
                                 
-                                    <input required class="form-control" type="text" value="" id="dateInput">
+                                <input required class="form-control" type="text" value="" id="dateInput" pattern="\d{2}\/\d{2}\/\d{4}" >
                             
                             </div>    
                     </div>
@@ -331,9 +332,9 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 <div class="card-body">
                     <div style="margin-top: 15px;" class="form-group">
                      <label >
-                        Credit card-number: (xxxx xxxx xxxx xxxx)
+                        Credit card-number: (16 digits, no spaces)
                         </label>
-                        <input required type="text" title="We ask for your credit card number in case of no-show, 20$ will be charged." maxlength="19"  pattern="[0-9\s]{13,19}" class="form-control" placeholder="xxxx xxxx xxxx xxxx" id="cc-number" onchange="if (typeof this.reportValidity === 'function') {this.reportValidity();}">
+                        <input required type="text" title="We ask for your credit card number in case of no-show, 20$ will be charged."  class="form-control" placeholder="xxxxxxxxxxxxxxxx" id="creditcard">
                     </div>
                 </div>
             </div>

@@ -107,3 +107,7 @@ hr{
     font-size: 16px;
     max-width: 300px;
 }
+.ulcentered {
+    width: 45%;
+    margin: auto;
+}

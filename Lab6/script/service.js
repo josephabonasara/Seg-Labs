@@ -19,6 +19,15 @@ var megan =
     dayOff: [4,5],
 };
 
+function validateCredit(a) {
+    var number = document.getElementById('creditcard').value;
+    var regex = new RegExp("^[0-9]{16}$");
+    if (!regex.test(number))
+        return false;
+
+    return true;
+}
+
 
 
 function disableDates(date) {
@@ -49,7 +58,30 @@ function disableDates(date) {
 }
 $(document).ready(function(){
 
+    $("#creditcard").on("change", function(){
+        if (!validateCredit("#creditcard")){
+            alert("Wrong format for creditcard, it must be 16 digits and no spaces.");
+            $("#creditcard").val("");
+            $("#creditcard").addClass("error");
+        }
+        else {
+            $("#creditcard").removeClass("error");
+        }
+    });
+    $("#creditcard").on("mouseenter", function(){
+        $("#creditcard").addClass("showInput");
+    });
 
+    $("#creditcard").on("mouseleave", function(){
+        $("#creditcard").removeClass("showInput");
+    });
+
+
+    $("#creditcard").tooltip({
+        classes: {
+          "ui-tooltip": "highlight"
+        }
+    });
 
     $("#dateInput").datepicker(
         {
@@ -60,12 +92,6 @@ $(document).ready(function(){
         }   
     );
   
-
-    $("#cc-number").tooltip({
-        classes: {
-          "ui-tooltip": "highlight"
-        }
-    });
     document.getElementById("bookform").onsubmit = submitfunc;
 
     function submitfunc() {
