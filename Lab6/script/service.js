@@ -66,17 +66,17 @@ $(document).ready(function(){
           "ui-tooltip": "highlight"
         }
     });
+    document.getElementById("bookform").onsubmit = submitfunc;
+
+    function submitfunc() {
+        var els = document.getElementsByName('exampleRadios2');
+        for (var i=0;i<els.length;i++){
+            if ( els[i].checked ) {
+                var therapist =els[i].id;
+            }
+        }
+        var calendar = $("#dateInput");
+        alert("Your appointment has been booked successfully. \nAppointment details:\n" + "Therapist: "+ therapist+ "\nDate: "+ calendar.val());
+};
 });
 
-document.getElementById("bookform").onsubmit = submitfunc;
-
-function submitfunc() {
-    var els = document.getElementsByName('exampleRadios2');
-    for (var i=0;i<els.length;i++){
-      if ( els[i].checked ) {
-        var therapist =els[i].name;
-      }
-    }
-    var calendar = $("#dateinput");
-    alert("Your appointment has been booked successfully. Appointment details:\n" + "Therapist: "+ therapist+ "\n Date: "+ calendar.val());
-};

@@ -81,6 +81,13 @@ th,td {
 .navbar{
     display:inherit;
     text-align: center;
+}.navbar.center .navbar-inner {
+    text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
 }
 .card-title{
     font-size: 20px;
